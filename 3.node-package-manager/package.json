@@ -10,5 +10,9 @@
     "demo"
   ],
   "author": "dhanushkumar",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "hello": "^0.6.2",
+    "loadash": "^1.0.0"
+  }
 }
