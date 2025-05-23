@@ -1,0 +1,17 @@
+{
+  "name": "19.node-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@apollo/server": "^4.12.1",
+    "graphql": "^16.11.0",
+    "graphql-tag": "^2.12.6"
+  }
+}

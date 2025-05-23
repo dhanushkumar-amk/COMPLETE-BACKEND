@@ -1,0 +1,16 @@
+{
+  "name": "18.socket",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+   "dev" : "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  }
+}

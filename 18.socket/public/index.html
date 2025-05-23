@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket io</title>
+</head>
+<body>
+    <div id="user-list">
+        <h3>Online users</h3>
+        <ul id="users">
+
+        </ul>
+    </div>
+
+    <div id="chat"></div>
+
+    <form id="message-form">
+        <input type="text" id="message-input" placeholder="Enter your message..."/>
+        <button type="submit" >Send</button>
+    </form>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io()
+
+    const chat = document.getElementById('chat');
+    const userList = document.getElementById('user-list')
+    const messageForm = document.getElementById('message-form')
+    const messageInput = document.getElementById('message-input')
+    const users = document.getElementById('users')
+
+    const userName = prompt("Enter your user-name")
+
+    socket.emit('join', userName);
+
+    socket.on("userJoined", (user) => {
+        addMessage(`${user} had joined a chat`)
+    })
+
+    io.on("userList", (users) => {
+        userList.innerHTML = users.map((user) => `<li> ${user} </li>`).join("")
+    })
+
+    function addMessage(input) {
+        const messageElement = document.createElement('div');
+        messageElement.textContent = input;
+        chat.appendChild(messageElement);
+
+        //scroll the botm of the container
+        chat.scrollTop = chat.scrollHeight
+    }
+
+</script>
+</body>
+</html>
