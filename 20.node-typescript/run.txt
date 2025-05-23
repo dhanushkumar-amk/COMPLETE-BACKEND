@@ -1,0 +1,41 @@
+steps to configure typeScript in node js
+1 => npm init -y
+
+2 => npm i typescript @types/node ts-node --save-dev
+
+
+3 => npx tsc --init
+
+
+4 =>   "scripts": {
+    "bulid" : "tsc",
+    "start" : "node dist/app.js",
+    "dev" : "nodemon src/app.ts"
+     // nodemon or ts-node
+  },
+
+  5 => tsconfig.json
+    {
+  "compilerOptions": {
+    "target": "es2016",
+    "lib": ["ES6"],
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    "esModuleInterop": true,
+
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+}
+
+6 =>  npm run bulid
+
+7 => npm run dev
+
+ create express server
+ npm i @types/express express @types/node
