@@ -39,3 +39,6 @@ steps to configure typeScript in node js
 
  create express server
  npm i @types/express express @types/node
+
+create a mongose model
+npm i mongoose @types/mongoose

@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "@types/express": "^5.0.2",
-    "express": "^5.1.0"
+    "@types/mongoose": "^5.11.96",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.0"
   }
 }
