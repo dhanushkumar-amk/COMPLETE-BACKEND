@@ -1,0 +1,4 @@
+1 => bun init
+
+2 => Run  particular file
+ bun filename
